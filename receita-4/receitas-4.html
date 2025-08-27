@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cervejas</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+
+    <button id="botaoCarregar">Mostrar Cervejas</button>
+    <button id="botaoOrdenar">Ordenar Cervejas</button>
+    <button id="botaoEmbaralhar">Embaralhar Cervejas</button>
+
+    <div id="meuAmor"></div>
+
+    <script>
+        let cervejas = ["Guiness", "Desperados", "Becks"]
+
+        function criarTabela(lista) {
+            let tabela = "<table><tr><th>Cerveja</th></tr>"
+            lista.forEach(item => tabela += `<tr><td>${item}</td></tr>`)
+            tabela += "</table>"
+            return tabela
+        }
+
+        function carregarDiv() {
+            let div = document.getElementById("meuAmor")
+            div.innerHTML = criarTabela(cervejas)
+        }
+
+        function ordenarCervejas() {
+            cervejas.sort()
+            carregarDiv()
+        }
+
+        function embaralharCervejas() {
+            cervejas.sort(() => Math.random() - 0.5)
+            carregarDiv()
+        }
+
+        document.getElementById("botaoCarregar").addEventListener("click", carregarDiv)
+        document.getElementById("botaoOrdenar").addEventListener("click", ordenarCervejas)
+        document.getElementById("botaoEmbaralhar").addEventListener("click", embaralharCervejas)
+    </script>
+
+</body>
+</html>

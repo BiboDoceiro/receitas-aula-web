@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Mostrar Cerveja</title>
+    <link href="./estilo.css" rel="stylesheet">
+</head>
+<body>
+
+    <div>
+        <button id="botaoCarregar">Carregar/Apagar Cerveja</button>
+    </div>
+
+    <div id="nomeCerveja"></div>
+
+    <script>
+        let alternar = true;
+        let divCerveja = document.getElementById("nomeCerveja");
+
+        function toggleCerveja() {
+            if (alternar) {
+                divCerveja.innerHTML = "Guinness";
+                divCerveja.style.opacity = 0;
+                setTimeout(() => divCerveja.style.opacity = 1, 10);
+            } else {
+                divCerveja.style.opacity = 0;
+                setTimeout(() => divCerveja.innerHTML = "", 500);
+            }
+            alternar = !alternar;
+        }
+
+        document.getElementById("botaoCarregar").addEventListener("click", toggleCerveja);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+.verso {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    margin: 2px 0;
+}
+
+.mote {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.link {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.link:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+.link:visited {
+    color: purple;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.poeta img {
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    border-collapse: collapse;
+    width: 350px;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #04AA6D;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #d9f7d9;
+}
