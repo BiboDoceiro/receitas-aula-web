@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>   
+   <head>
+      <meta charset="UTF-8">      
+   </head>
+   <body>
+      <div><button id="botaoCarregar">Carregar roupas...</button></div>
+      <div id="lista-roupas"></div>            
+   </body>   
+   
+   <script>
+      let roupas = ["Camiseta", "Calça Jeans", "Vestido", "Jaqueta", "Tênis"]
+
+      // Função arrow que recebe o array como parâmetro
+      const carregarDiv = (itens) => {
+         const div = document.getElementById("lista-roupas")
+         const itensHtml = itens.map(item => `<h1>${item}</h1>`)
+         div.innerHTML = itensHtml.join("\n")
+      }
+
+      // Arrow function no listener também
+      const botao = document.getElementById("botaoCarregar")
+      botao.addEventListener("click", () => carregarDiv(roupas))                 
+   </script>
+</html>
